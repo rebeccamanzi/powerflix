@@ -44,7 +44,7 @@ const Slider = ({ children }) => (
     <SlickSlider {...{
       dots: false,
       infinite: true,
-      speed: 300,
+      speed: 700,
       centerMode: false,
       variableWidth: true,
       adaptiveHeight: true,
