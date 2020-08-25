@@ -4,10 +4,11 @@ import { FooterBase } from './styles';
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.instagram.com/codepwr/" target="blank">
-        <img src="../.././public/logo_codepwr.svg" alt="Logo Code Power" />
-      </a>
+      {/* <a href="https://www.instagram.com/codepwr/" target="blank">
+        <img src="../../assets/img/logo_codepwr.png" alt="Logo Code Power" />
+      </a> */}
       <p>
+        {/* eslint-disable-next-line */}
         Made with 💜 by
         {' '}
         <a href="https://www.linkedin.com/in/rebeccamanzi/" target="blank">
