@@ -28,7 +28,9 @@ function CadastroCategoria() {
     );
   }
 
-  // ============
+  // useEffect() -> é chamada quando quer que algum 'efeito colateral' aconteça 
+  // 1º parametro -> o que deve acontecer
+  // 2º parametro (opcional) -> quando deve acontecer
 
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
