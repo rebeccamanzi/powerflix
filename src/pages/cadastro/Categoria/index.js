@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
+
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -10,23 +12,10 @@ function CadastroCategoria() {
     descricao: '',
     cor: '',
   };
+
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
-
-  function setValue(chave, valor) {
-    // chave: nome, descricao...
-    setValues({
-      ...values,
-      [chave]: valor, // nome: 'valor'
-    });
-  }
-
-  function handleChange(infosDoEvento) {
-    setValue(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value,
-    );
-  }
 
   // useEffect() -> é chamada quando quer que algum 'efeito colateral' aconteça 
   // 1º parametro -> o que deve acontecer
@@ -62,7 +51,7 @@ function CadastroCategoria() {
           values,
         ]);
 
-        setValues(valoresIniciais);
+        clearForm(valoresIniciais);
       }}
       >
 
